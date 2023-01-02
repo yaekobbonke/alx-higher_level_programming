@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""empty class function"""
+"""0-rectangle:empty class function"""
 class Rectangle:
    """empty class that defines a rectangle"""
    pass
