@@ -3,5 +3,5 @@
 #Done by Yaekob Bonke(ALX student cohort 9)
 """Defines python empty class"""
 class Square:
-"""represent a square"""
-  pass
+    """represent a square"""
+    pass
