@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 0-read_file.py
-#python i/o project
 """Defines a text file-reading function."""
 
 
