@@ -16,6 +16,9 @@ getters and setters
     @property
     def width (self):
         return sef.__width
+    """
+    setter for width
+    """
     @width.setter
     def width(self, n):
         if type(n) is not int:
@@ -23,9 +26,15 @@ getters and setters
         if n <= 0:
             raise ValueError("width must be > 0")
         self.__width = n
+    """
+    getter for height
+    """
     @property
     def height (self):
         return self.__height
+    """
+    Setter for height.
+    """
     @height.setter
     def height (self, m):
         if type(m) is not int:
@@ -34,9 +43,16 @@ getters and setters
             raise ValueError("height must be > 0")
         self.__height = m
 
+    """
+    Getter for x.
+    """
     @property
     def x (self):
         return self.__x
+    """
+    Setter function to set the value of x.
+    if x is not integer value, raises type error.
+    """
     @x.setter
     def x(self, a):
         if type(a) is not int:
@@ -63,3 +79,8 @@ getters and setters
         print('#')
 
 
+    def __str__(self):
+        return [Rectangle] (<id>) <x>/<y> - <width>/<height>
+
+
+i
