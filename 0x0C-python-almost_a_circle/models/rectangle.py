@@ -10,9 +10,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-"""
-getters and setters
-"""
+
     @property
     def width (self):
         return sef.__width
@@ -76,11 +74,18 @@ getters and setters
     def area(self):
         return self.__width*self.__height
     def display(self):
-        print('#')
+        """
+        Display The Rectangle Using  '#'
 
+        """
+        print(("\n" * self.__y) + "\n".join(((" " * self.__x) + ("#" * self.__width)) 
+            for i in range(self.__height)))
 
     def __str__(self):
-        return [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        return "[Rectangle] {:d} {:d}/{:d} -{:d} /{:d}".format(self.id, self.x, self.y, self.width, self.height)
+    def update(self, *args):
+        print(update(id, width, height, x, y))
 
-
-i
+    def  update(self, *args, **kwargs):
+      print(args)
+      print(kwargs)   
