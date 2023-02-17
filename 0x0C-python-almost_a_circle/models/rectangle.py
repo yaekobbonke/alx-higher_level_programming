@@ -1,9 +1,18 @@
 #!/usr/bin/python3
-"""Rectangle class"""
 from models.base import Base
-
+"""a class Base imported from base file
+"""
 class Rectangle(Base):
+    """a rectangle class that inherits from Base class
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """__init__ method used to initialize attributes
+        attributes:
+         self.__width
+         self.__height
+         self.__x
+         self.__y
+         """
 
         Base.__init__(self, id)
         self.__width = width
