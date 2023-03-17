@@ -2,10 +2,11 @@
 -- The states table contains only one record where name = California
 -- Results must be sorted in ascending order by cities.id
 -- You are not allowed to use the JOIN keyword
--- The database name will be passed as an argument of the mysql command
-
-SELECT *;
-FROM states;
-WHERE name IN(
-	INSERT states VALUES('California')
-	ORDER BY cities.id);
+-- The database name will be passed as an argument of the mysql co
+SELECT `id`, `name`
+  FROM `cities`
+ WHERE `state_id` IN
+       (SELECT `id`
+	  FROM `states`
+	 WHERE `name` = "California")
+ ORDER BY `id`;
