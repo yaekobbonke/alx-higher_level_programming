@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let num = parseInt(process.argv[2]);
+const num = parseInt(process.argv[2]);
 
 if (num) {
   console.log('My number: ' + num);
