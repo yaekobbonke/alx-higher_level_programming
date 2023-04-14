@@ -6,7 +6,7 @@ import sys
 import MySQLdb
 
 
-def main():
+def state():
     conn = MySQLdb.connect(
                         host="localhost",
                         port=3306,
@@ -26,4 +26,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    state()
