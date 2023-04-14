@@ -5,7 +5,7 @@ Imported modules
 import MySQLdb
 
 
-    def state:
+    def state():
     conn = MySQLdb.connect(
                         host="localhost",
                         port=3306,
