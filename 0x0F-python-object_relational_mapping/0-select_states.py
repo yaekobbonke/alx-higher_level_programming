@@ -5,6 +5,7 @@ imported modules
 import MySQLdb
 import sys
 
+
 def state():
     conn_obj = MySQLdb.connect(
                         host="localhost",
