@@ -2,17 +2,16 @@
 """
 Imported modules
 """
-import sys
 import MySQLdb
 
 
-def state():
+    def state:
     conn = MySQLdb.connect(
                         host="localhost",
                         port=3306,
-                        user=sys.argv[1],
-                        passwd=sys.argv[2],
-                        db=sys.argv[3],
+                        user="mysql username",
+                        passwd="password",
+                        db="jackman_db",
                         charset="utf8"
                             )
     cur = conn.cursor()
