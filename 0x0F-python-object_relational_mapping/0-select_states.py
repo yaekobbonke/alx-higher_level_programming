@@ -3,25 +3,26 @@
 Imported modules
 """
 import MySQLdb
+import sys
 
 
     def state():
-    conn = MySQLdb.connect(
+    conn_obj = MySQLdb.connect(
                         host="localhost",
                         port=3306,
-                        user="root",
-                        passwd="password",
-                        db="my_db",
+                        user=sys.argv[1],
+                        passwd=sys.argv[2],
+                        db=sys.argv[3],
                         charset="utf8"
                             )
-    cur = conn.cursor()
+    cur_obj = conn_obj.cursor()
     query = "SELECT id,name FROM states ORDER by id ASC"
-    cur.execute(query)
-    row = cur.fetchall()
+    cur_obj.execute(query)
+    row = cur_obj.fetchall()
     for row in row:
         print(row)
-    cur.close()
-    conn.close()
+    cur_obj.close()
+    conn_obj.close()
 
 
 if __name__ == "__main__":
