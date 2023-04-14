@@ -3,15 +3,15 @@
 imported modules
 """
 import MySQLdb
-
+import sys
 
 def state():
     conn_obj = MySQLdb.connect(
                         host="localhost",
                         port=3306,
-                        user="root",
-                        passwd="password",
-                        db="my_db",
+                        user=sys.argv[1],
+                        passwd=sys.argv[2],
+                        db=sys.argv[3],
                         charset="utf8"
                             )
     cur_obj = conn_obj.cursor()
