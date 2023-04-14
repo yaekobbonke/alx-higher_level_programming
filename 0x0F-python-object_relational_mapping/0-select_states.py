@@ -9,9 +9,9 @@ import MySQLdb
     conn = MySQLdb.connect(
                         host="localhost",
                         port=3306,
-                        user="mysql username",
+                        user="root",
                         passwd="password",
-                        db="jackman_db",
+                        db="my_db",
                         charset="utf8"
                             )
     cur = conn.cursor()
