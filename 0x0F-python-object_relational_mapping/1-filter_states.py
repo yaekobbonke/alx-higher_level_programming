@@ -27,4 +27,4 @@ def state():
 
 
 if __name__ == "__main__":
-"0-select_states.py" 29L, 669C                                                                                        8,0-1         Top
+    state()
