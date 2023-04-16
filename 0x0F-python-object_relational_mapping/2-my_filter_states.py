@@ -7,8 +7,9 @@ where name matches the argument
 import MySQLdb
 import sys
 
-def main():
-    conn = MySQLdb.connect(
+
+def state():
+    conn_db = MySQLdb.connect(
                         host="localhost",
                         port=3306,
                         user=sys.argv[1],
@@ -16,18 +17,18 @@ def main():
                         db=sys.argv[3],
                         charset="utf8"
                             )
-    cur = conn.cursor()
+    cur_obj = conn_db.cursor()
     search = sys.argv[4]
     query = """SELECT * FROM states where name = '{:s}'
             ORDER by id ASC""".format(search)
-    cur.execute(query)
-    row = cur.fetchall()
+    cur_obj.execute(query)
+    row = cur_obj.fetchall()
     for r in row:
         if r[1] == search:
             print(r)
-    cur.close()
-    conn.close()
+    cur_obj.close()
+    conn_db.close()
 
 
 if __name__ == "__main__":
-    main()
+    state()
