@@ -2,6 +2,7 @@
 """
 imported modules
 """
+
 import MySQLdb
 import sys
 
@@ -18,12 +19,12 @@ def state():
     cur_obj = conn_obj.cursor()
     query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
     cur_obj.execute(query)
-    row_states = cur_obj.fetchall()
-    for row in row_states:
-        if row[0][1] == 'N'
-        print(row)
-    cur_obj.close()
-    conn_obj.close()
+    row = cur_obj.fetchall()
+    for r in row:
+        if r[1][0] == 'N':
+            print(r)
+    cur.close()
+    conn.close()
 
 
 if __name__ == "__main__":
