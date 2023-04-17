@@ -24,7 +24,7 @@ def state():
     for r in row:
         print(r)
     cur_obj.close()
-    conn_obj.close()
+    conn_db.close()
 
 
 if __name__ == "__main__":
