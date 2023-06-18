@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""imported modules"""
 import MySQLdb
 import sys
 
@@ -10,10 +11,10 @@ if __name__ == "__main__":
                            passwd=sys.argv[2],
                            db=sys.argv[3],
                            charset="utf8")
-    # Start cursor
+    # Start cursor object
     cur = conn.cursor()
 
-    # Query
+    # Query to excuted
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     query_rows = cur.fetchall()
 
